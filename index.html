@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Tshepang Mlambo — Software Engineer</title>
+  <meta name="description" content="Portfolio of Tshepang Mlambo — Full‑stack developer (C#, React, MySQL). Projects, skills, and contact."/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <meta property="og:title" content="Tshepang Mlambo — Software Engineer">
+  <meta property="og:description" content="Full‑stack developer (C#, React, MySQL). Projects, skills, and contact.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/og-image.png">
+  <meta name="theme-color" content="#1F4D3A">
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Tshepang Mlambo",
+  "jobTitle": "Software Developer",
+  "url": "https://example.com",
+  "sameAs": [
+    "https://www.linkedin.com/",
+    "https://github.com/"
+  ]
+}
+  </script>
+</head>
+<body>
+<header class="site-header">
+  <div class="container nav">
+    <a class="brand" href="#top">
+      <img src="assets/logo.svg" alt="TM logo" width="28" height="28" />
+      <span>Tshepang Mlambo</span>
+    </a>
+    <nav>
+      <button class="nav-toggle" aria-label="Toggle menu">☰</button>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <section class="hero">
+
+    <div class="container hero-inner">
+      <div class="hero-text">
+        <h1>Full‑Stack Developer crafting reliable apps</h1>
+        <p>I build practical software with <strong>C#</strong>, <strong>React</strong>, and <strong>MySQL/Postgres</strong>. I focus on clean architecture, testability, and smooth UX.</p>
+        <div class="cta">
+          <a class="btn primary" href="#projects">See Projects</a>
+          <a class="btn ghost" href="#contact">Contact Me</a>
+        </div>
+        <ul class="quick-facts">
+          <li>Based in South Africa</li>
+          <li>QA/UAT & Automation experience</li>
+          <li>Kubernetes & Docker basics</li>
+        </ul>
+      </div>
+      <div class="hero-card">
+        <div class="avatar" aria-hidden="true">
+          <span>TM</span>
+        </div>
+        <div class="hero-card-body">
+          <h2>Currently</h2>
+          <p>Exploring cloud‑ready architectures and building tools for data import, diagnostics, and reporting.</p>
+          <a href="#contact" class="link">Open to work →</a>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <section id="about" class="section">
+    <div class="container two-col">
+      <div>
+        <h2>About</h2>
+        <p>I’m a results‑driven Software Engineer with experience in backend development, QA/UAT, and full‑stack web apps. I enjoy translating messy real‑world requirements into reliable systems.</p>
+        <p>Recently I’ve been working on telecom‑focused SaaS utilities (imports, diagnostics) and a fintech/health‑payments case study.</p>
+        <div class="badges">
+          <span class="badge">C# / .NET</span>
+          <span class="badge">React / TS</span>
+          <span class="badge">MySQL / Postgres</span>
+          <span class="badge">Docker / K8s</span>
+        </div>
+      </div>
+      <aside class="card">
+        <h3>Highlights</h3>
+        <ul class="ticks">
+          <li>UAT templates & QA pipelines that reduced bug regressions</li>
+          <li>Custom CSV → DB loaders with validation</li>
+          <li>Clear, human‑friendly documentation</li>
+        </ul>
+      </aside>
+    </div>
+  </section>
+
+  <section id="projects" class="section alt">
+    <div class="container">
+      <h2>Selected Projects</h2>
+      <div class="grid">
+        <article class="tile">
+          <div class="thumb" role="img" aria-label="Agent Diagnostics dashboard"></div>
+          <h3>Agent Diagnostics</h3>
+          <p>Diagnostics dashboard for call‑center agents with health checks and reporting.</p>
+          <div class="meta">
+            <span>.NET</span><span>React</span><span>MySQL</span>
+          </div>
+        </article>
+        <article class="tile">
+          <div class="thumb" role="img" aria-label="Virtual Access Uploader"></div>
+          <h3>VAS Uploader</h3>
+          <p>CSV uploader + parser that validates, normalizes, and persists data.</p>
+          <div class="meta">
+            <span>C#</span><span>WinForms</span><span>MySQL</span>
+          </div>
+        </article>
+        <article class="tile">
+          <div class="thumb" role="img" aria-label="MoneyForYou + HealthForAll"></div>
+          <h3>MFY + H4A Case Study</h3>
+          <p>End‑to‑end architecture models (ArchiMate), APIs, and UX flows for health payments.</p>
+          <div class="meta">
+            <span>ArchiMate</span><span>APIs</span><span>Docs</span>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills" class="section">
+    <div class="container">
+      <h2>Skills</h2>
+      <ul class="skills">
+        <li>C#, ASP.NET Core, EF Core</li>
+        <li>React, TypeScript, Vite</li>
+        <li>SQL (MySQL/Postgres), schema design</li>
+        <li>Docker, Kubernetes (minikube)</li>
+        <li>QA/UAT, test plans, Swagger/OpenAPI</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="contact" class="section alt">
+    <div class="container two-col">
+      <div>
+        <h2>Contact</h2>
+        <p>Want to collaborate or discuss a role? Send a message—I'll reply soon.</p>
+        <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+          <input type="hidden" name="form-name" value="contact" />
+          <p class="hidden">
+            <label>Don’t fill this out: <input name="bot-field" /></label>
+          </p>
+          <div class="field">
+            <label for="name">Name</label>
+            <input id="name" name="name" required />
+          </div>
+          <div class="field">
+            <label for="email">Email</label>
+            <input id="email" type="email" name="email" required />
+          </div>
+          <div class="field">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+          </div>
+          <button class="btn primary" type="submit">Send</button>
+          <p class="form-note">No backend needed—works on Netlify Forms. Or email me: <a href="mailto:tshepangmlambo@gmail.com">Mail me</a></p>
+        </form>
+      </div>
+      <aside class="card">
+        <h3>Links</h3>
+        <ul class="links">
+          <li><a href="https://github.com/" target="_blank" rel="noreferrer">GitHub</a></li>
+          <li><a href="https://www.linkedin.com/" target="_blank" rel="noreferrer">LinkedIn</a></li>
+          <li><a href="https://tshepangmlambo.wixsite.com/portfolio" target="_blank" rel="noreferrer">Wix Portfolio</a></li>
+        </ul>
+      </aside>
+    </div>
+  </section>
+</main>
+    
+<footer class="site-footer">
+  <div class="container">
+    <small>© <span id="year"></span> Tshepang Mlambo. Built with care.</small>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
