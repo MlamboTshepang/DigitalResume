@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="description" content="Portfolio of Tshepang Mlambo">
     <meta name="author" content="Tshepang Mlambo">
-    <link rel="stylesheet" href="styles.css">
-    <script src="script.js"></script>
+    <link rel="stylesheet" href="Public/styles.css">
+    <script src="Src/script.js"></script>
     <title>Mlambo Resume</title>
 </head>
 <body>
@@ -14,7 +14,7 @@
     <header class="site-header">
         <div class="container nav">
             <a class="brand" href="#top">
-                <img src="assets/MT%20New%20Logo.png" alt="TM logo" width="28" height="28" />
+                <img src="public/assets/MT%20New%20Logo.png" alt="TM logo" width="28" height="28" />
                 <span>Tshepang Mlambo</span>
             </a>
             <nav>
@@ -128,7 +128,7 @@
             <div>
                 <h2>Contact</h2>
                 <p>Want to collaborate or discuss a role? Send a message—I'll reply soon.</p>
-                <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+                <form name="contact" method="POST" action="http://localhost:3000/contact"">
                     <input type="hidden" name="form-name" value="contact" />
                     <p class="hidden">
                         <label>Don’t fill this out: <input name="bot-field" /></label>
@@ -162,5 +162,6 @@
         </ul>
     </aside>
 </footer>
+<script type="module" src="Src/index.js"></script>
 </body>
 </html>

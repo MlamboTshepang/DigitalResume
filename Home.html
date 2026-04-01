@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <link rel="stylesheet" href="ResumeFinalStyle.css" type="text/css">
+    <script id="tailwind-config" src="tailwind.config.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&amp;family=Space+Grotesk:wght@700;800&amp;display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+</head>
+<body class="p-4 md:p-12 flex justify-center items-start min-h-screen">
+<!--BACKGROUND (Paper Texture)-->
+<div class="document-container paper-texture max-w-6xl w-full border-2 border-ink p-6 md:p-12 relative overflow-hidden">
+<!-------HEADER----->
+    <header class="flex flex-col md:flex-row justify-between items-start border-b-2 border-ink pb-8 mb-8 gap-6">
+        <div class="space-y-1">
+            <div class="text-xs font-bold uppercase">Department of Digital Intelligence</div>
+            <div class="text-xs uppercase tracking-widest">Internal Access Only // Level 4 Clearance</div>
+            <div id="DivFile" class="text-3xl font-bold uppercase mt-4">FILE: MLAMBO_T_8824</div>
+            <div class="flex gap-2 items-center mt-2">
+                <span class="bg-redact text-white px-2 text-xs">EYES ONLY</span>
+                <span class="text-xs">[REDACTED LOCATION: <span class="redacted">JOHANNESBURG, GP</span>]</span>
+            </div>
+        </div>
+        <div class="flex flex-col items-end gap-2">
+            <div class="stamp-box p-3 border-4 flex flex-col items-center">
+                <span class="text-sm font-bold">CLASSIFIED</span>
+                <span class="text-2xl font-black">TOP SECRET</span>
+                <span class="text-[10px]">AUTH NO: 77-0092-B</span>
+            </div>
+            <div class="text-right text-[10px] mt-4 uppercase">
+                Case Officer: <span id="redacted1" class="redacted">E.Holmes; S.Holmes</span><br/>
+                Date: 14 OCT 19XX (REVISED 2026)<br/>
+                Status: ACTIVE_OPERATIVE
+            </div>
+        </div>
+    </header>
+    <div class="grid grid-cols-1 md:grid-cols-12 gap-8">
+<!------SIDE NAVBAR------->
+        <aside class="md:col-span-3 border-r border-ink/20 pr-4 space-y-8">
+            <nav class="space-y-4">
+                <div class="font-bold border-b border-ink pb-1 text-xs">FILE INDEX</div>
+                <ul class="space-y-1">
+                    <li><a class="flex items-center gap-2 hover:bg-ink hover:text-paper transition-colors px-1 py-1" href="#">01_PROFILE</a></li>
+                    <li><a class="flex items-center gap-2 hover:bg-ink hover:text-paper transition-colors px-1 py-1" href="#">02_ARTIFACTS</a></li>
+                    <li><a class="flex items-center gap-2 hover:bg-ink hover:text-paper transition-colors px-1 py-1" href="#">03_ARCHIVE</a></li>
+                    <li><a class="flex items-center gap-2 hover:bg-ink hover:text-paper transition-colors px-1 py-1" href="#">04_CHANNELS</a></li>
+                </ul>
+            </nav>
+            <div class="bg-aged p-4 border border-ink/30 space-y-4">
+                <div class="text-xs font-bold underline">BIO-METRIC DATA</div>
+                <div class="text-[10px] leading-tight space-y-2">
+                    <p>SUBJECT: TSHEPANG MLAMBO</p>
+                    <p>ROLE: SOLUTIONS ARCHITECT</p>
+                    <p>EXPERTISE: FULL-STACK / EMBEDDED</p>
+                    <p>RELIABILITY: <span class="redacted">HIGHLY_QUESTIONABLE</span></p>
+                </div>
+            </div>
+            <div class="space-y-2">
+                <!--  Attachments-->
+                <div class="text-xs font-bold underline">ATTACHMENTS</div>
+                <div class="border-2 border-dashed border-ink/40 p-4 aspect-square flex items-center justify-center text-center">
+                    <span class="text-[10px] text-ink/60">[IMAGE_THUMBNAIL_01.DAT]</span>
+                </div>
+            </div>
+        </aside>
+        <!---MAIN SECTION----->
+        <main class="md:col-span-9 space-y-12">
+            <section class="space-y-6">
+                <div class="flex items-start gap-4">
+                    <span class="bg-ink text-paper text-4xl font-bold p-2 leading-none">P1</span>
+                    <div>
+                        <h1 class="text-4xl md:text-5xl font-bold leading-none tracking-tighter uppercase mb-2">Subject: Tshepang Mlambo</h1>
+                        <div class="text-xl italic border-l-4 border-ink pl-4 py-1">
+                            Operational Intelligence: Freelance Solutions Architect &amp; Systems Engineer.
+                        </div>
+                    </div>
+                </div>
+                <div class="columns-1 md:columns-2 gap-8 space-y-4 text-sm leading-relaxed text-justify">
+                    <p>Subject is currently operating as a freelance agent specializing in <span class="redacted">high-performance</span> digital infrastructure. 
+                        Intelligence suggests mastery over complex Full-Stack ecosystems, specifically those that challenge traditional corporate paradigms. 
+                        Subject is known for engineering editorial-grade user experiences that bypass standard <span class="redacted">security</span> protocols.</p>
+                    <p>Base of operations confirmed as Johannesburg, South Africa. 
+                        Intelligence indicates heavy involvement in both software and hardware manipulation. 
+                        Subject's methods are described as "disruptive" and "architecturally pure".</p>
+                    <div class="bg-aged/50 p-4 border border-ink space-y-2 break-inside-avoid">
+                        <span class="font-bold text-[10px] uppercase block border-b border-ink mb-1">Observation Log</span>
+                        <p class="text-[11px]">"The subject appears to treat code as a physical structure. 
+                            His recent work on <span class="redacted"><a href="#">CLASSIFIED: Community Culture</a></span> suggests a deep understanding of low-latency signal routing."</p>
+                    </div>
+                    <p>Key technical proficiencies include but are not limited to JavaScript, Python, and C#. 
+                        Observations confirm ability to deploy systems with 99.9% operational uptime under extreme <span class="redacted">pressure</span>.</p>
+                </div>
+                <div class="flex flex-wrap gap-4 pt-4">
+                    <button class="bg-redact text-paper px-6 py-2 text-sm font-bold hover:bg-transparent hover:text-ink border-2 border-redact transition-all uppercase">Open File: Systems</button>
+                    <button class="border-2 border-redact text-redact px-6 py-2 text-sm font-bold hover:bg-redact hover:text-paper transition-all uppercase">Manifesto.doc</button>
+                </div>
+            </section>
+<!--            EVIDENCE (PORTFOLIO) SECTION-->
+            <section class="pt-8 border-t-2 border-ink space-y-8">
+                <div class="flex justify-between items-center">
+                    <h2 class="text-2xl font-bold uppercase">Evidence Exhibit B: Artifacts</h2>
+                    <span class="text-xs font-mono">SEQ_NO: 001-2026</span>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <!--                Arduino Section-->
+                    <div class="border-2 border-ink p-4 space-y-4">
+                        <div class="bg-ink aspect-video overflow-hidden">
+                            <img alt="Grainy Hardware Schematic" class="w-full h-full object-cover grainy opacity-70" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB_tH5uwMh__o-uZ5vgpsJLfQWBwdb4jP1gLLP9UsDsQmUc83MHzmbkOrxhPqdw2LI0Q_W2ZpXTAf39qqiE_gXxAM5V0SbYkdms6nlzFCUv7BtmLbOKGxnIuVE9QAWdWrq3-zk8BEbNKuN7LTmTvNfTP-lE3Wj-hfdEWRny0fa5o4783aPtwPFCccj4tqGmR0yjCrIBfGwziQY3QDTj_3auoYvBbh9lFQDNcimEjEMJKl7DHHbDL7Epc-tvfrui5j0a15z7lloUROve"/>
+                        </div>
+                        <div class="space-y-2">
+                            <div class="flex justify-between items-center">
+                                <span class="bg-stamp text-white px-2 py-0.5 text-[10px] font-bold uppercase">Hardware Component</span>
+                                <span class="material-symbols-outlined text-sm">memory</span>
+                            </div>
+                            <h3 class="text-xl font-bold uppercase">Arduino Signal Matrix</h3>
+                            <p class="text-xs leading-tight">Community Culture. Remains an import landmark for readers today</p>
+                        </div>
+                    </div>
+<!--                    Project Section 2-->
+                    <div class="border-2 border-ink p-4 flex flex-col bg-aged">
+                        <div class="flex-1 space-y-4">
+                            <div class="flex justify-between items-start">
+                                <span class="material-symbols-outlined text-4xl">podcasts</span>
+                                <span class="border border-ink px-1 text-[10px]">TRANS_ID: 994</span>
+                            </div>
+                            <h3 class="text-xl font-bold uppercase">DAILY UI</h3>
+                            <p class="text-xs leading-tight italic">Generating Daily. UI/UI Prompts containing of everything digital.
+                                From <span class="redacted">Day20s Live Tracker</span> or <span class="redacted">DAY29: </span> ALONGSIDE
+                                <span class="redacted">DAY5: </span>
+                                We aim to achieve our goal of designing quality and professional mockups for the community to use.</p>
+                            <div class="pt-4 flex flex-wrap gap-1">
+                                <span class="bg-redact text-white px-1 text-[10px]">NEXT.JS</span>
+                                <span class="bg-redact text-white px-1 text-[10px]">EJS</span>
+                                <span class="bg-redact text-white px-1 text-[10px]">PostGRES4</span>
+                            </div>
+                        </div>
+                        <a class="mt-6 text-xs font-bold underline flex items-center gap-1 uppercase" href="#">Request Connection 
+                            <span class="material-symbols-outlined text-xs">north_east</span></a>
+                    </div>
+                </div>
+            </section>
+<!--            Live Achievements-->
+            <section class="grid grid-cols-2 md:grid-cols-4 border-2 border-ink bg-white/30">
+                <div class="p-4 border-r border-b md:border-b-0 border-ink">
+                    <div class="text-2xl font-bold">08+</div>
+                    <div class="text-[10px] uppercase">Service Years</div>
+                </div>
+                <div class="p-4 border-b md:border-b-0 md:border-r border-ink">
+                    <div class="text-2xl font-bold">142</div>
+                    <div class="text-[10px] uppercase">Active Deployments</div>
+                </div>
+                <div class="p-4 border-r border-ink">
+                    <div class="text-2xl font-bold">04</div>
+                    <div class="text-[10px] uppercase">Registered Patents</div>
+                </div>
+                <div class="p-4">
+                    <div class="text-2xl font-bold">24/7</div>
+                    <div class="text-[10px] uppercase">Watch Mentality</div>
+                </div>
+            </section>
+<!--          CONTACT SECTION-->
+            <section class="bg-redact text-paper p-8 text-center space-y-4">
+                <h3 class="text-2xl md:text-3xl font-bold uppercase italic tracking-tighter">Initiate Recruitment Protocol?</h3>
+                <p class="text-xs max-w-md mx-auto">Specialized architectural solutions required. Submit encryption key to begin secure transmission.</p>
+                <div class="pt-4">
+                        <button class="bg-paper text-redact px-10 py-3 font-bold uppercase hover:bg-aged transition-colors">Submit Request</button>
+                </div>
+            </section>
+        </main>
+    </div>
+<!--    FOOTER----->
+    <footer class="mt-16 border-t-2 border-ink pt-8 flex flex-col md:flex-row justify-between items-end gap-4">
+        <div class="text-[10px] leading-tight">
+            <span class="font-bold">NOTICE:</span> All content within this document is subject to the Digital Intelligence Act 19XX. 
+            Unauthorized reproduction will result in <span class="redacted">DELETION</span>.<br/>
+            ©2026 Mlambo_Curations // [BUILT_FOR_<span class="redacted">DISRUPTION</span>]
+        </div>
+        <div class="flex gap-6">
+            <a class="text-[10px] font-bold underline uppercase" href="#">GHUB</a>
+            <a class="text-[10px] font-bold underline uppercase" href="#">LNKDIN</a>
+            <a class="text-[10px] font-bold underline uppercase" href="#">Mail</a>
+            <a class="text-[10px] font-bold underline uppercase" href="#">PoBox</a>
+        </div>
+    </footer>
+    <div class="absolute bottom-0 left-0 p-4 opacity-10 pointer-events-none rotate-35">
+        <div class="border-2 border-ink p-2 text-xs">CERTIFIED COPY OF A COPY</div>
+    </div>
+</div>
+</body></html>
