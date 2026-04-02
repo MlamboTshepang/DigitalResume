@@ -8,7 +8,7 @@ const PORT = 3000;
 const server = http.createServer((req, res) => {
     // 2. Define the path to your HTML file
     // __dirname is a Node variable that gets the current folder's path
-    const filePath = path.join(__dirname, '../Home.html');
+    const filePath = path.join(__dirname, 'Home.html');
 
     // 3. Read the HTML file
     fs.readFile(filePath, (err, content) => {
