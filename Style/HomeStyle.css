@@ -1,15 +1,15 @@
-
-
 @layer base {
     body {
         @apply bg-portal-bg text-ink font-mono selection:bg-redact selection:text-white;
         background-color: #0a0c10;
-    
+
     }
 }
+
 .grainy {
     filter: contrast(120%) brightness(90%) sepia(50%) grayscale(80%);
 }
+
 .redacted {
     @apply bg-redact text-redact select-none cursor-default;
     background-color: #0a0c10;
@@ -21,29 +21,38 @@
     content: "";
     @apply absolute inset-0 bg-redact transition-transform duration-700 ease-in-out origin-right;
 }
+
 .redacted:hover::after {
     @apply scale-x-0;
 }
+
 .document-container {
     background-color: #e8e1d5;
     background-image: radial-gradient(#dccdbb 1px, transparent 1px);
     background-size: 20px 20px;
-    box-shadow: 0 0 50px rgba(0,0,0,0.5);
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
 }
+
 .stamp-box {
     @apply border-4 border-stamp text-stamp font-stamp uppercase tracking-tighter;
     transform: rotate(-2deg);
 }
+
 .folder-tab {
     clip-path: polygon(0 0, 85% 0, 100% 100%, 0% 100%);
 }
+
 .paper-texture {
     position: relative;
 }
+
 .paper-texture::before {
     content: "";
     position: absolute;
-    top: 0; left: 0; width: 100%; height: 100%;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     background: url('https://www.transparenttextures.com/patterns/parchment.png');
     pointer-events: none;
     opacity: 0.3;
