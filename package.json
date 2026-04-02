@@ -1,0 +1,23 @@
+{
+  "name": "digitalresume",
+  "version": "1.0.0",
+  "description": "digital resume full stack application",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MlamboTshepang/DigitalResume.git"
+  },
+  "author": "Tshepang Mlambo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MlamboTshepang/DigitalResume/issues"
+  },
+  "homepage": "https://github.com/MlamboTshepang/DigitalResume#readme",
+  "dependencies": {
+    "nodemon": "^3.1.11"
+  }
+}
