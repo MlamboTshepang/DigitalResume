@@ -1,16 +1,10 @@
 document.addEventListener('DOMContentLoaded', () => {
-        tailwindConfig = {
+    module.exports = {
+        content: ["./*.html", "./**/*.js"],
         theme: {
-        extend: {
-        colors: {
-        'ink': '#000000',
-        'paper': '#ffffff',
-        'redact': '#ff0000',
-        'aged': '#f5f1e8',
-        'stamp': '#dc2626'
-    }
-    }
-    }
+            extend: {},
+        },
+        plugins: [],
     }
     const red1 = document.querySelectorAll(".redacted");
 // Loop through each redacted element

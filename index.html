@@ -232,6 +232,19 @@
         <div class="border-2 border-ink p-2 text-xs">CERTIFIED COPY OF A COPY</div>
     </div>
 </div>
-
+<!--TO BE MOVED SOON-->
+<script>
+    const red1 = document.querySelectorAll(".redacted");
+    // Loop through each redacted element
+    red1.forEach((element) => {
+        // 1. Listen for a hover on this specific element
+        element.addEventListener("mouseover", () => {
+            element.classList.remove("redacted");
+            setTimeout(() => {
+                element.classList.add("redacted");
+            }, 1000);
+        });
+    });
+</script>
 </body>
 </html>

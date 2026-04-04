@@ -1,0 +1,23 @@
+{
+  "name": "digitalresume",
+  "version": "1.0.0",
+  "description": "Mlambo Digital Resume",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MlamboTshepang/DigitalResume.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MlamboTshepang/DigitalResume/issues"
+  },
+  "homepage": "https://github.com/MlamboTshepang/DigitalResume#readme",
+  "devDependencies": {
+    "tailwindcss": "^4.2.2"
+  }
+}
