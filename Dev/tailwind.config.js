@@ -1,20 +1,21 @@
-document.addEventListener('DOMContentLoaded', () => {
-    module.exports = {
-        content: ["./*.html", "./**/*.js"],
-        theme: {
-            extend: {},
-        },
-        plugins: [],
-    }
-    const red1 = document.querySelectorAll(".redacted");
-// Loop through each redacted element
-    red1.forEach((element) => {
-        // 1. Listen for a hover on this specific element
-        element.addEventListener("mouseover", () => {
-            element.classList.remove("redacted");
-            setTimeout(() => {
-                element.classList.add("redacted");
-            }, 1000);
-        });
-    });
-});
+    tailwind.config = {
+    theme: {
+    extend: {
+    colors: {
+    ink: "#1a1c1e",
+    paper: "#f4f1ea",
+    folder: "#dccdbb",
+    stamp: "#be123c",
+    surface: "#0d150f",
+    "accent-glow": "#AEF6C7",
+    jungle: "#5B8266",
+    granite: "#3E6259",
+    pine: "#294936",
+},
+    fontFamily: {
+    mono: ['"Courier Prime"', "monospace"],
+    sans: ['"Space Grotesk"', "sans-serif"],
+},
+},
+},
+};

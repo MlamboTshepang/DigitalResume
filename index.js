@@ -6,21 +6,45 @@ const path = require('path');
 const PORT = 3000;
 
 const server = http.createServer((req, res) => {
-    // 2. Define the path to your HTML file
-    // __dirname is a Node variable that gets the current folder's path
-    const filePath = path.join(__dirname, 'Home.html');
+    // 2. Build the file path based on the requested URL
+    let filePath = path.join(__dirname, req.url === '/' ? 'index.html' : req.url);
 
-    // 3. Read the HTML file
+    // 3. Determine the correct Content-Type based on the file extension
+    const extname = path.extname(filePath);
+    let contentType = 'text/html';
+    
+    switch (extname) {
+        case '.css':
+            contentType = 'text/css';
+            break;
+        case '.js':
+            contentType = 'text/javascript';
+            break;
+        case '.png':
+            contentType = 'image/png';
+            break;
+        case '.jpg':
+        case '.jpeg':
+            contentType = 'image/jpeg';
+            break;
+    }
+
+    // 4. Read the requested file
     fs.readFile(filePath, (err, content) => {
         if (err) {
-            // If the file is missing or there is an error, send a 500 error
-            res.writeHead(500, { 'Content-Type': 'text/plain' });
-            res.end('Server Error: Could not load the page.');
-            console.error(err);
+            if (err.code === 'ENOENT') {
+                // File not found
+                res.writeHead(404, { 'Content-Type': 'text/plain' });
+                res.end('404 Not Found');
+            } else {
+                // Some other server error
+                res.writeHead(500, { 'Content-Type': 'text/plain' });
+                res.end(`Server Error: ${err.code}`);
+            }
         } else {
-            // 4. Send the file content with the correct HTML header
-            res.writeHead(200, { 'Content-Type': 'text/html' });
-            res.end(content);
+            // 5. Send the file content with the correct header
+            res.writeHead(200, { 'Content-Type': contentType });
+            res.end(content, 'utf-8');
         }
     });
 });

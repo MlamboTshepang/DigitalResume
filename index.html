@@ -1,312 +1,214 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="utf-8"/>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-    <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&amp;family=Space+Grotesk:wght@700;800&amp;display=swap"
-          rel="stylesheet"/>
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
-          rel="stylesheet"/>
-    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-    <script src="./Dev/tailwind.config.js"></script>
-    <link href="./style/HomeStyle.css" rel="stylesheet" type="text/tailwindcss">
-    <script>
-        tailwindConfig = {
-            theme: {
-                extend: {
-                    colors: {
-                        'ink': '#000000',
-                        'paper': '#ffffff',
-                        'redact': '#ff0000',
-                        'aged': '#f5f1e8',
-                        'stamp': '#dc2626'
-                    }
-                }
-            }
-        }
-    </script>
-<!--    STYLE-->
-    <style>
-        @layer base {
-            body {
-                @apply bg-portal-bg text-ink font-mono selection:bg-redact selection:text-white;
-                background-color: #0a0c10;
+<!doctype html>
+<html class="scroll-smooth" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>MLAMBO_T // Level 4</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400&family=Space+Grotesk:wght@300;700&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+    <link href="./style/style-classified.css" rel="stylesheet" />
+    <script src="./Dev/tailwind.config.js" ></script>
+  </head>
 
-            }
-        }
-
-        .grainy {
-            filter: contrast(120%) brightness(90%) sepia(50%) grayscale(80%);
-        }
-
-        .redacted {
-            @apply bg-redact text-redact select-none cursor-default;
-            background-color: #0a0c10;
-            text-box: revert-layer;
-        }
-
-        .redacted::after {
-            /* 2. Create the solid black redaction box that sits on top */
-            content: "";
-            @apply absolute inset-0 bg-redact transition-transform duration-700 ease-in-out origin-right;
-        }
-
-        .redacted:hover::after {
-            @apply scale-x-0;
-        }
-
-        .document-container {
-            background-color: #e8e1d5;
-            background-image: radial-gradient(#dccdbb 1px, transparent 1px);
-            background-size: 20px 20px;
-            box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
-        }
-
-        .stamp-box {
-            @apply border-4 border-stamp text-stamp font-stamp uppercase tracking-tighter;
-            transform: rotate(-2deg);
-        }
-
-        .folder-tab {
-            clip-path: polygon(0 0, 85% 0, 100% 100%, 0% 100%);
-        }
-
-        .paper-texture {
-            position: relative;
-        }
-
-        .paper-texture::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: url('https://www.transparenttextures.com/patterns/parchment.png');
-            pointer-events: none;
-            opacity: 0.3;
-        }
-
-    </style>
-    <title>Mlambo Resume</title>
-</head>
-<body class="p-4 md:p-12 flex justify-center items-start min-h-screen">
-<!--BACKGROUND (Paper Texture)-->
-<div class="document-container paper-texture max-w-6xl w-full border-2 border-ink p-6 md:p-12 relative overflow-hidden">
-    <!-------HEADER----->
-    <header class="flex flex-col md:flex-row justify-between items-start border-b-2 border-ink pb-8 mb-8 gap-6">
-        <div class="space-y-1">
-            <div class="text-xs font-bold uppercase">Department of Digital Intelligence</div>
-            <div class="text-xs uppercase tracking-widest">Internal Access Only // Level 4 Clearance</div>
-            <div class="text-3xl font-bold uppercase mt-4" id="DivFile">FILE: MLAMBO_T_8824</div>
-            <div class="flex gap-2 items-center mt-2">
-                <span class="bg-redact text-white px-2 text-xs">EYES ONLY</span>
-                <span class="text-xs">[REDACTED LOCATION: <span class="redacted">JOHANNESBURG, GP</span>]</span>
+  <body class="dossier-bg min-h-screen p-4 pt-24 md:p-16 lg:p-24 flex justify-center font-mono selection:bg-pine selection:text-paper text-ink">
+<!--    <div class="noise-overlay"></div>-->
+    <div class="max-w-5xl w-full relative">
+      <!--    NavBar-->
+      <nav aria-label="Folder Tabs" class="absolute -top-[42px] left-0 flex items-end gap-1 z-0">
+        <a href="index.html" aria-current="page" class="folder-tab h-11 px-8 md:px-10 flex items-center bg-paper border-x-2 border-t-2 border-ink text-ink font-bold text-[10px] uppercase tracking-widest relative z-30">
+          01_Profile</a>
+        <a href="Artifacts.html" class="folder-tab h-9 px-8 md:px-10 flex items-center bg-folder border-x-2 border-t-2 border-ink/30 text-ink/70 font-bold text-[10px] uppercase tracking-widest hover:h-10 hover:bg-[#e4d8c8] hover:text-ink focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-pine focus-visible:ring-offset-2 focus-visible:ring-offset-[#0d0e10] transition-all z-20">
+          02_Artifacts</a>
+        <a href="#" class="folder-tab h-9 px-8 md:px-10 flex items-center bg-folder border-x-2 border-t-2 border-ink/30 text-ink/70 font-bold text-[10px] uppercase tracking-widest hover:h-10 hover:bg-[#e4d8c8] hover:text-ink focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-pine focus-visible:ring-offset-2 focus-visible:ring-offset-[#0d0e10] transition-all z-10">
+          03_Systems</a>
+      </nav>
+      <div class="paper-sheet animate-folder w-full p-8 md:p-16 relative z-10 border-2 border-ink overflow-hidden">
+        <!--        Header / Banner-->
+        <header
+          class="grid grid-cols-1 md:grid-cols-12 gap-8 border-b-4 border-ink pb-12 mb-12">
+          <div class="md:col-span-8">
+            <div class="text-[10px] font-bold tracking-[0.3em] uppercase mb-4 opacity-60 boot-glitch">
+              Archive Reference: ZA-JHB-8824-ALPHA
             </div>
+            <h1 class="text-5xl md:text-7xl font-sans font-black uppercase tracking-tighter leading-none mb-6">
+              <span class="boot-typewriter">MLAMBO</span> <span class="text-pine boot-typewriter">TSHEPANG</span>
+            </h1>
+            <div class="flex flex-wrap gap-4 items-center">
+              <span class="bg-ink text-paper px-3 py-1 text-xs font-bold italic boot-glitch"
+                >CLASSIFIED: EYES ONLY</span>
+              <span class="text-xs uppercase tracking-widest border-b border-ink boot-fade">
+                Loc:<span tabindex="0" class="redacted-text px-1 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-pine focus-visible:text-paper focus-visible:bg-ink">Johannesburg, RSA</span
+                ></span>
+            </div>
+          </div>
+
+          <div class="md:col-span-4 flex flex-col items-end justify-start">
+            <div class="stamp-effect border-4 border-stamp p-4 text-center font-sans boot-fade">
+              <div class="text-[10px] font-bold">DEPARTMENT OF</div>
+              <div class="text-2xl font-black leading-none">SYSTEMS ARCH</div>
+              <div class="text-xs font-bold mt-1">OPERATIVE ACTIVE</div>
+            </div>
+          </div>
+        </header>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+          <!--            ASIDE-->
+          <aside class="lg:col-span-3 space-y-12">
+            <div class="bg-folder/30 p-4 border border-ink/10">
+              <div class="text-[10px] font-black underline mb-3">
+                BIO-METRIC.LOG
+              </div>
+              <div class="text-[11px] space-y-3 leading-tight">
+                <div>
+                  <span class="opacity-50">ROLE:</span> <br />
+                  SOLUTIONS ARCHITECT
+                </div>
+                <div>
+                  <span class="opacity-50">MODUS:</span> <br />
+                  FULL-STACK / EMBEDDED
+                </div>
+                <div>
+                  <span class="opacity-50">RELIABILITY:</span> <br />
+                  <span
+                    tabindex="0"
+                    class="redacted-text px-1 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-pine focus-visible:text-paper focus-visible:bg-ink"
+                    >CRITICAL_ASSET</span
+                  >
+                </div>
+              </div>
+            </div>
+          </aside>
+          <!--            MAIN CONTENT-->
+          <main class="lg:col-span-9 space-y-16">
+            <section class="prose prose-sm max-w-none">
+              <div class="flex items-center gap-4 mb-8">
+                <span class="text-4xl font-black bg-ink text-paper px-4 py-1">P.01</span>
+                <h2 class="text-2xl font-sans font-bold uppercase tracking-tight">
+                  Executive Intelligence Summary</h2>
+              </div>
+
+              <div class="columns-1 md:columns-2 gap-10 text-justify">
+                <p class="mb-4">
+                  Operative Mlambo specializes in the construction of
+                  <span
+                    tabindex="0"
+                    class="redacted-text px-1 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-pine focus-visible:text-paper focus-visible:bg-ink">high-latency disruptive</span
+                  >
+                  digital frameworks. Intel suggests a proficiency in Full-Stack
+                  ecosystems that challenge established corporate security
+                  protocols.
+                </p>
+
+                <blockquote
+                  class="border-l-4 border-pine pl-4 py-2 my-6 bg-folder/10 italic"
+                >
+                  "Subject treats code as structural load-bearing material.
+                  Systems are built for architectural purity."
+                </blockquote>
+
+                <p>
+                  Subject confirmed as primary architect for
+                  <span
+                    tabindex="0"
+                    class="redacted-text px-1 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-pine focus-visible:text-paper focus-visible:bg-ink"
+                    >Community Culture Matrix</span
+                  >. Known technical proficiencies: JS, Python, C#, and
+                  low-level hardware manipulation via Arduino interfaces.
+                </p>
+              </div>
+            </section>
+
+            <section class="pt-12 border-t-2 border-ink">
+              <div class="flex justify-between items-end mb-8">
+                <h3 class="text-xl font-sans font-black uppercase">
+                  Exhibit B: Physical Artifacts
+                </h3>
+                <span class="text-[10px] opacity-40">VOL_REF: 2026_Q1</span>
+              </div>
+
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="group border-2 border-ink p-4 hover:bg-white transition-colors">
+                  <div class="aspect-video bg-ink mb-4 overflow-hidden grayscale group-hover:grayscale-0 transition-all">
+                    <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&q=80&w=800" alt="Hardware" class="w-full h-full object-cover opacity-80"/>
+                  </div>
+                  <h4 class="font-sans font-bold uppercase text-lg">
+                    Arduino Signal Matrix</h4>
+                  <p class="text-[11px] mt-2 opacity-70">
+                    Low-latency signal routing for precision agriculture and
+                    smart farming applications.
+                  </p>
+                </div>
+
+                <div class="border-2 border-ink p-6 bg-folder/20 flex flex-col justify-between">
+                  <div>
+                    <div class="flex justify-between items-start mb-6">
+                      <i class="material-symbols-outlined text-4xl">dynamic_form</i>
+                      <span class="text-[9px] font-bold border border-ink px-1 uppercase">Metric: Verified</span>
+                    </div>
+                    <h4 class="font-sans font-bold uppercase text-lg">Daily UI Forge</h4>
+                    <p class="text-[11px] mt-2 italic leading-relaxed">
+                      Systematic production of professional-grade mockups.
+                      Current output:
+                      <span tabindex="0" class="redacted-text px-1 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-pine focus-visible:text-paper focus-visible:bg-ink">
+                        30+ Prototypes</span>.
+                    </p>
+                  </div>
+                  <a href="#" class="mt-8 text-xs font-black underline flex items-center gap-2 group uppercase">
+                    Request Access
+                    <i class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">arrow_forward</i>
+                  </a>
+                </div>
+              </div>
+            </section>
+
+            <section
+              class="grid grid-cols-2 md:grid-cols-4 border-2 border-ink divide-x-2 divide-ink">
+              <div class="p-4">
+                <div class="text-3xl font-sans font-black">08+</div>
+                <div class="text-[9px] font-bold uppercase opacity-60">
+                  Yrs Ops
+                </div>
+              </div>
+              <div class="p-4">
+                <div class="text-3xl font-sans font-black">142</div>
+                <div class="text-[9px] font-bold uppercase opacity-60">
+                  Deployments
+                </div>
+              </div>
+              <div class="p-4">
+                <div class="text-3xl font-sans font-black text-pine">99.9%</div>
+                <div class="text-[9px] font-bold uppercase opacity-60">
+                  Uptime
+                </div>
+              </div>
+              <div class="p-4">
+                <div class="text-3xl font-sans font-black">24/7</div>
+                <div class="text-[9px] font-bold uppercase opacity-60">
+                  Watch Mode
+                </div>
+              </div>
+            </section>
+          </main>
         </div>
-        <div class="flex flex-col items-end gap-2">
-            <div class="stamp-box p-3 border-4 flex flex-col items-center">
-                <span class="text-sm font-bold">CLASSIFIED</span>
-                <span class="text-2xl font-black">TOP SECRET</span>
-                <span class="text-[10px]">AUTH NO: 77-0092-B</span>
-            </div>
-            <div class="text-right text-[10px] mt-4 uppercase">
-                Case Officer: <span class="redacted" id="redacted1">E.Holmes; S.Holmes</span><br/>
-                Date: 14 OCT 19XX (REVISED 2026)<br/>
-                Status: ACTIVE_OPERATIVE
-            </div>
-        </div>
-    </header>
-    <div class="grid grid-cols-1 md:grid-cols-12 gap-8">
-        <!------SIDE NAVBAR------->
-        <aside class="md:col-span-3 border-r border-ink/20 pr-4 space-y-8">
-            <nav class="space-y-4">
-                <div class="font-bold border-b border-ink pb-1 text-xs">FILE INDEX</div>
-                <ul class="space-y-1">
-                    <li><a class="flex items-center gap-2 hover:bg-ink hover:text-paper transition-colors px-1 py-1"
-                           href="#">01_PROFILE</a></li>
-                    <li><a class="flex items-center gap-2 hover:bg-ink hover:text-paper transition-colors px-1 py-1"
-                           href="Artifacts.html">02_ARTIFACTS</a></li>
-                    <li><a class="flex items-center gap-2 hover:bg-ink hover:text-paper transition-colors px-1 py-1"
-                           href="#">03_ARCHIVE</a></li>
-                    <li><a class="flex items-center gap-2 hover:bg-ink hover:text-paper transition-colors px-1 py-1"
-                           href="#">04_CHANNELS</a></li>
-                </ul>
-            </nav>
-            <div class="bg-aged p-4 border border-ink/30 space-y-4">
-                <div class="text-xs font-bold underline">BIO-METRIC DATA</div>
-                <div class="text-[10px] leading-tight space-y-2">
-                    <p>SUBJECT: TSHEPANG MLAMBO</p>
-                    <p>ROLE: SOLUTIONS ARCHITECT</p>
-                    <p>EXPERTISE: FULL-STACK / EMBEDDED</p>
-                    <p>RELIABILITY: <span class="redacted">HIGHLY_QUESTIONABLE</span></p>
-                </div>
-            </div>
-            <div class="space-y-2">
-                <!--  Attachments-->
-                <div class="text-xs font-bold underline">ATTACHMENTS</div>
-                <div class="border-2 border-dashed border-ink/40 p-4 aspect-square flex items-center justify-center text-center">
-                    <span class="text-[10px] text-ink/60">[IMAGE_THUMBNAIL_01.DAT]</span>
-                </div>
-            </div>
-        </aside>
-        <!---MAIN SECTION----->
-        <main class="md:col-span-9 space-y-12">
-            <section class="space-y-6">
-                <div class="flex items-start gap-4">
-                    <span class="bg-ink text-paper text-4xl font-bold p-2 leading-none">P1</span>
-                    <div>
-                        <h1 class="text-4xl md:text-5xl font-bold leading-none tracking-tighter uppercase mb-2">Subject:
-                            Tshepang Mlambo</h1>
-                        <div class="text-xl italic border-l-4 border-ink pl-4 py-1">
-                            Operational Intelligence: Freelance Solutions Architect &amp; Systems Engineer.
-                        </div>
-                    </div>
-                </div>
-                <div class="columns-1 md:columns-2 gap-8 space-y-4 text-sm leading-relaxed text-justify">
-                    <p>Subject is currently operating as a freelance agent specializing in <span class="redacted">high-performance</span>
-                        digital infrastructure.
-                        Intelligence suggests mastery over complex Full-Stack ecosystems, specifically those that
-                        challenge traditional corporate paradigms.
-                        Subject is known for engineering editorial-grade user experiences that bypass standard <span
-                                class="redacted">security</span> protocols.</p>
-                    <p>Base of operations confirmed as Johannesburg, South Africa.
-                        Intelligence indicates heavy involvement in both software and hardware manipulation.
-                        Subject's methods are described as "disruptive" and "architecturally pure".</p>
-                    <div class="bg-aged/50 p-4 border border-ink space-y-2 break-inside-avoid">
-                        <span class="font-bold text-[10px] uppercase block border-b border-ink mb-1">Observation Log</span>
-                        <p class="text-[11px]">"The subject appears to treat code as a physical structure.
-                            His recent work on <span class="redacted"><a
-                                    href="#">CLASSIFIED: Community Culture</a></span> suggests a deep understanding of
-                            low-latency signal routing."</p>
-                    </div>
-                    <p>Key technical proficiencies include but are not limited to JavaScript, Python, and C#.
-                        Observations confirm ability to deploy systems with 99.9% operational uptime under extreme <span
-                                class="redacted">pressure</span>.</p>
-                </div>
-                <div class="flex flex-wrap gap-4 pt-4">
-                    <button class="bg-redact text-paper px-6 py-2 text-sm font-bold hover:bg-transparent hover:text-ink border-2 border-redact transition-all uppercase">
-                        Open File: Systems
-                    </button>
-                    <button class="border-2 border-redact text-redact px-6 py-2 text-sm font-bold hover:bg-redact hover:text-paper transition-all uppercase">
-                        Manifesto.doc
-                    </button>
-                </div>
-            </section>
-            <!--            EVIDENCE (PORTFOLIO) SECTION-->
-            <section class="pt-8 border-t-2 border-ink space-y-8">
-                <div class="flex justify-between items-center">
-                    <h2 class="text-2xl font-bold uppercase">Evidence Exhibit B: Artifacts</h2>
-                    <span class="text-xs font-mono">SEQ_NO: 001-2026</span>
-                </div>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                    <!--                Arduino Section-->
-                    <div class="border-2 border-ink p-4 space-y-4">
-                        <div class="bg-ink aspect-video overflow-hidden">
-                            <img alt="Grainy Hardware Schematic" class="w-full h-full object-cover grainy opacity-70"
-                                 src="https://lh3.googleusercontent.com/aida-public/AB6AXuB_tH5uwMh__o-uZ5vgpsJLfQWBwdb4jP1gLLP9UsDsQmUc83MHzmbkOrxhPqdw2LI0Q_W2ZpXTAf39qqiE_gXxAM5V0SbYkdms6nlzFCUv7BtmLbOKGxnIuVE9QAWdWrq3-zk8BEbNKuN7LTmTvNfTP-lE3Wj-hfdEWRny0fa5o4783aPtwPFCccj4tqGmR0yjCrIBfGwziQY3QDTj_3auoYvBbh9lFQDNcimEjEMJKl7DHHbDL7Epc-tvfrui5j0a15z7lloUROve"/>
-                        </div>
-                        <div class="space-y-2">
-                            <div class="flex justify-between items-center">
-                                <span class="bg-stamp text-white px-2 py-0.5 text-[10px] font-bold uppercase">Hardware Component</span>
-                                <span class="material-symbols-outlined text-sm">memory</span>
-                            </div>
-                            <h3 class="text-xl font-bold uppercase">Arduino Signal Matrix</h3>
-                            <p class="text-xs leading-tight">Community Culture. Remains an import landmark for readers
-                                today</p>
-                        </div>
-                    </div>
-                    <!--                    Project Section 2-->
-                    <div class="border-2 border-ink p-4 flex flex-col bg-aged">
-                        <div class="flex-1 space-y-4">
-                            <div class="flex justify-between items-start">
-                                <span class="material-symbols-outlined text-4xl">podcasts</span>
-                                <span class="border border-ink px-1 text-[10px]">TRANS_ID: 994</span>
-                            </div>
-                            <h3 class="text-xl font-bold uppercase">DAILY UI</h3>
-                            <p class="text-xs leading-tight italic">Generating Daily. UI/UI Prompts containing of
-                                everything digital.
-                                From <span class="redacted">Day20s Live Tracker</span> or <span
-                                        class="redacted">DAY29: </span> ALONGSIDE
-                                <span class="redacted">DAY5: </span>
-                                We aim to achieve our goal of designing quality and professional mockups for the
-                                community to use.</p>
-                            <div class="pt-4 flex flex-wrap gap-1">
-                                <span class="bg-redact text-white px-1 text-[10px]">NEXT.JS</span>
-                                <span class="bg-redact text-white px-1 text-[10px]">EJS</span>
-                                <span class="bg-redact text-white px-1 text-[10px]">PostGRES4</span>
-                            </div>
-                        </div>
-                        <a class="mt-6 text-xs font-bold underline flex items-center gap-1 uppercase" href="#">Request
-                            Connection
-                            <span class="material-symbols-outlined text-xs">north_east</span></a>
-                    </div>
-                </div>
-            </section>
-            <!--            Live Achievements-->
-            <section class="grid grid-cols-2 md:grid-cols-4 border-2 border-ink bg-white/30">
-                <div class="p-4 border-r border-b md:border-b-0 border-ink">
-                    <div class="text-2xl font-bold">08+</div>
-                    <div class="text-[10px] uppercase">Service Years</div>
-                </div>
-                <div class="p-4 border-b md:border-b-0 md:border-r border-ink">
-                    <div class="text-2xl font-bold">142</div>
-                    <div class="text-[10px] uppercase">Active Deployments</div>
-                </div>
-                <div class="p-4 border-r border-ink">
-                    <div class="text-2xl font-bold">04</div>
-                    <div class="text-[10px] uppercase">Registered Patents</div>
-                </div>
-                <div class="p-4">
-                    <div class="text-2xl font-bold">24/7</div>
-                    <div class="text-[10px] uppercase">Watch Mentality</div>
-                </div>
-            </section>
-            <!--          CONTACT SECTION-->
-            <section class="bg-redact text-paper p-8 text-center space-y-4">
-                <h3 class="text-2xl md:text-3xl font-bold uppercase italic tracking-tighter">Initiate Recruitment
-                    Protocol?</h3>
-                <p class="text-xs max-w-md mx-auto">Specialized architectural solutions required. Submit encryption key
-                    to begin secure transmission.</p>
-                <div class="pt-4">
-                    <button class="bg-paper text-redact px-10 py-3 font-bold uppercase hover:bg-aged transition-colors">
-                        Submit Request
-                    </button>
-                </div>
-            </section>
-        </main>
+
+        <footer
+          class="mt-20 pt-8 border-t-2 border-ink flex flex-col md:flex-row justify-between items-end gap-6">
+          <small
+            class="text-[10px] leading-relaxed opacity-70 max-w-sm font-bold block uppercase">
+            RECORDED UNDER DIGITAL INTELLIGENCE ACT. UNAUTHORIZED REPRODUCTION
+            IS SUBJECT TO
+            <span tabindex="0" class="redacted-text px-1 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-pine focus-visible:text-paper focus-visible:bg-ink">
+              SYSTEM_PURGE</span>.
+          </small>
+          <div class="flex gap-8 text-[11px] font-black uppercase tracking-widest">
+            <a href="#" data-value="G_HUB" data-text="G_HUB" class="cipher-link focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-pine">G_HUB</a>
+            <a href="#" data-value="L_INKEDIN" data-text="L_INKEDIN" class="cipher-link focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-pine">L_INKEDIN</a>
+            <a href="#" data-value="ENCRYPT_MAIL" data-text="ENCRYPT_MAIL" class="cipher-link focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-pine">ENCRYPT_MAIL</a>
+          </div>
+        </footer>
+      </div>
     </div>
-    <!--    FOOTER----->
-    <footer class="mt-16 border-t-2 border-ink pt-8 flex flex-col md:flex-row justify-between items-end gap-4">
-        <div class="text-[10px] leading-tight">
-            <span class="font-bold">NOTICE:</span> All content within this document is subject to the Digital
-            Intelligence Act 19XX.
-            Unauthorized reproduction will result in <span class="redacted">DELETION</span>.<br/>
-            ©2026 Mlambo_Curations // [BUILT_FOR_<span class="redacted">DISRUPTION</span>]
-        </div>
-        <div class="flex gap-6">
-            <a class="text-[10px] font-bold underline uppercase" href="#">GHUB</a>
-            <a class="text-[10px] font-bold underline uppercase" href="#">LNKDIN</a>
-            <a class="text-[10px] font-bold underline uppercase" href="#">Mail</a>
-        </div>
-    </footer>
-    <div class="absolute bottom-0 left-0 p-4 opacity-10 pointer-events-none rotate-35">
-        <div class="border-2 border-ink p-2 text-xs">CERTIFIED COPY OF A COPY</div>
-    </div>
-</div>
-<!--TO BE MOVED SOON-->
-<script>
-    const red1 = document.querySelectorAll(".redacted");
-    // Loop through each redacted element
-    red1.forEach((element) => {
-        // 1. Listen for a hover on this specific element
-        element.addEventListener("mouseover", () => {
-            element.classList.remove("redacted");
-            setTimeout(() => {
-                element.classList.add("redacted");
-            }, 1000);
-        });
-    });
-</script>
-</body>
+  <script src="./Dev/script.js"></script>
+  </body>
 </html>

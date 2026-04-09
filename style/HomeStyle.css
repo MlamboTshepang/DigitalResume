@@ -1,6 +1,6 @@
 @layer base {
     body {
-        @apply bg-portal-bg text-ink font-mono selection:bg-redact selection:text-white;
+        @apply bg-portal-bg text-ink font-mono selection:bg-pine selection:text-white;
         background-color: #0a0c10;
 
     }
@@ -11,7 +11,7 @@
 }
 
 .redacted {
-    @apply bg-redact text-redact select-none cursor-default;
+    @apply bg-pine text-pine select-none cursor-default;
     background-color: #0a0c10;
     text-box: revert-layer;
 }
@@ -19,7 +19,7 @@
 .redacted::after {
     /* 2. Create the solid black redaction box that sits on top */
     content: "";
-    @apply absolute inset-0 bg-redact transition-transform duration-700 ease-in-out origin-right;
+    @apply absolute inset-0 bg-pine transition-transform duration-700 ease-in-out origin-right;
 }
 
 .redacted:hover::after {

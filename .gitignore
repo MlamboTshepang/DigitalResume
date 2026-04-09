@@ -6,7 +6,8 @@
 ._*
 
 # Custom folder icons
-Icon
+Icon
+
 
 # Volume root files
 .DocumentRevisions-V100
@@ -163,3 +164,9 @@ out/
 .yarn/unplugged
 .yarn/install-state.gz
 .pnp.*
+
+.agents
+.claude
+skills
+.impeccable.md
+.skills-lock.json
