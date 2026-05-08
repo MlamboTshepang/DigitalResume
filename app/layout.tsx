@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Courier_Prime, Space_Grotesk } from "next/font/google";
 import "./globals.css";
+import React from "react";
 
 const courierPrime = Courier_Prime({
   subsets: ["latin"],
