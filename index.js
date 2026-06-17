@@ -2,9 +2,14 @@
 const http = require('http');
 const fs = require('fs');
 const path = require('path');
+const express = require('express');
+
+const app = express();
+app.set('view engine', 'ejs');
 
 const PORT = 3000;
 
+// Creating the server
 const server = http.createServer((req, res) => {
     // 2. Build the file path based on the requested URL
     let filePath = path.join(__dirname, req.url === '/' ? 'index.html' : req.url);
@@ -47,6 +52,11 @@ const server = http.createServer((req, res) => {
             res.end(content, 'utf-8');
         }
     });
+});
+
+// 
+app.get('/', (req, res) => {
+    res.render('index');
 });
 
 

@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Paste the contents of your style-classified.css below */
+.dossier-bg {
+  background-color: #f3f0e8; /* Default background if not defined */
+}
+/* ... your custom glitches, redacting, and typewriter css */
