@@ -11,19 +11,19 @@
     <script src="./Dev/tailwind.config.js" ></script>
   </head>
 
-  <body class="dossier-bg min-h-screen p-4 pt-24 md:p-16 lg:p-24 flex justify-center font-mono selection:bg-pine selection:text-paper text-ink">
+  <body class="dossier-bg page-body">
 <!--    <div class="noise-overlay"></div>-->
     <div class="max-w-5xl w-full relative">
       <!--    NavBar-->
       <nav aria-label="Folder Tabs" class="absolute -top-[42px] left-0 flex items-end gap-1 z-0">
-        <a href="index.html" aria-current="page" class="folder-tab h-11 px-8 md:px-10 flex items-center bg-paper border-x-2 border-t-2 border-ink text-ink font-bold text-[10px] uppercase tracking-widest relative z-30">
+        <a href="index.html" aria-current="page" class="folder-tab folder-tab-active">
           01_Profile</a>
-        <a href="Artifacts.html" class="folder-tab h-9 px-8 md:px-10 flex items-center bg-folder border-x-2 border-t-2 border-ink/30 text-ink/70 font-bold text-[10px] uppercase tracking-widest hover:h-10 hover:bg-[#e4d8c8] hover:text-ink focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-pine focus-visible:ring-offset-2 focus-visible:ring-offset-[#0d0e10] transition-all z-20">
+        <a href="Artifacts.html" class="folder-tab folder-tab-inactive">
           02_Artifacts</a>
-        <a href="#" class="folder-tab h-9 px-8 md:px-10 flex items-center bg-folder border-x-2 border-t-2 border-ink/30 text-ink/70 font-bold text-[10px] uppercase tracking-widest hover:h-10 hover:bg-[#e4d8c8] hover:text-ink focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-pine focus-visible:ring-offset-2 focus-visible:ring-offset-[#0d0e10] transition-all z-10">
+        <a href="#" class="folder-tab folder-tab-inactive" style="z-index: 10;">
           03_Systems</a>
       </nav>
-      <div class="paper-sheet animate-folder w-full p-8 md:p-16 relative z-10 border-2 border-ink overflow-hidden">
+      <div class="paper-sheet animate-folder">
         <!--        Header / Banner-->
         <header
           class="grid grid-cols-1 md:grid-cols-12 gap-8 border-b-4 border-ink pb-12 mb-12">
@@ -38,13 +38,13 @@
               <span class="bg-ink text-paper px-3 py-1 text-xs font-bold italic boot-glitch"
                 >CLASSIFIED: EYES ONLY</span>
               <span class="text-xs uppercase tracking-widest border-b border-ink boot-fade">
-                Loc:<span tabindex="0" class="redacted-text px-1 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-pine focus-visible:text-paper focus-visible:bg-ink">Johannesburg, RSA</span
+                Loc:<span tabindex="0" class="redacted-text px-1">Johannesburg, RSA</span
                 ></span>
             </div>
           </div>
 
           <div class="md:col-span-4 flex flex-col items-end justify-start">
-            <div class="stamp-effect border-4 border-stamp p-4 text-center font-sans boot-fade">
+            <div class="stamp-effect">
               <div class="text-[10px] font-bold">DEPARTMENT OF</div>
               <div class="text-2xl font-black leading-none">SYSTEMS ARCH</div>
               <div class="text-xs font-bold mt-1">OPERATIVE ACTIVE</div>
@@ -70,7 +70,7 @@
                 </div>
                 <div>
                   <span class="opacity-50">RELIABILITY:</span> <br/>
-                  <span tabindex="0" class="redacted-text px-1 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-pine focus-visible:text-paper focus-visible:bg-ink">
+                  <span tabindex="0" class="redacted-text px-1">
                     CRITICAL_ASSET</span>
                 </div>
               </div>
@@ -88,7 +88,7 @@
               <div class="columns-1 md:columns-2 gap-10 text-justify">
                 <p class="mb-4">
                   Operative Mlambo specializes in the construction of
-                  <span tabindex="0" class="redacted-text px-1 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-pine focus-visible:text-paper focus-visible:bg-ink">high-latency disruptive</span>
+                  <span tabindex="0" class="redacted-text px-1">high-latency disruptive</span>
                   digital frameworks. Intel suggests a proficiency in Full-Stack
                   ecosystems that challenge established corporate security
                   protocols.
@@ -97,7 +97,7 @@
                   "Subject treats code as structural load-bearing material.
                   Systems are built for architectural purity."</blockquote>
                 <p>Subject confirmed as primary architect for
-                  <span tabindex="0" class="redacted-text px-1 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-pine focus-visible:text-paper focus-visible:bg-ink"
+                  <span tabindex="0" class="redacted-text px-1"
                     >Community Culture Matrix</span>.Known technical proficiencies: JS, Python, C#, and
                   low-level hardware manipulation via Arduino interfaces.
                 </p>
@@ -135,7 +135,7 @@
                     <p class="text-[11px] mt-2 italic leading-relaxed">
                       Systematic production of professional-grade mockups.
                       Current output:
-                      <span tabindex="0" class="redacted-text px-1 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-pine focus-visible:text-paper focus-visible:bg-ink">
+                      <span tabindex="0" class="redacted-text px-1">
                         30+ Prototypes</span>.
                     </p>
                   </div>
@@ -183,13 +183,13 @@
             class="text-[10px] leading-relaxed opacity-70 max-w-sm font-bold block uppercase">
             RECORDED UNDER DIGITAL INTELLIGENCE ACT. UNAUTHORIZED REPRODUCTION
             IS SUBJECT TO
-            <span tabindex="0" class="redacted-text px-1 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-pine focus-visible:text-paper focus-visible:bg-ink">
+            <span tabindex="0" class="redacted-text px-1">
               SYSTEM_PURGE</span>.
           </small>
           <div class="flex gap-8 text-[11px] font-black uppercase tracking-widest">
-            <a href="#" data-value="G_HUB" data-text="G_HUB" class="cipher-link focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-pine">G_HUB</a>
-            <a href="#" data-value="L_INKEDIN" data-text="L_INKEDIN" class="cipher-link focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-pine">L_INKEDIN</a>
-            <a href="#" data-value="ENCRYPT_MAIL" data-text="ENCRYPT_MAIL" class="cipher-link focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-pine">ENCRYPT_MAIL</a>
+            <a href="#" data-value="G_HUB" data-text="G_HUB" class="cipher-link">G_HUB</a>
+            <a href="https://www.linkedin.com/in/tshepangmlambo/" target="_blank" data-value="L_INKEDIN" data-text="L_INKEDIN" class="cipher-link">L_INKEDIN</a>
+            <a href="#" data-value="ENCRYPT_MAIL" data-text="ENCRYPT_MAIL" class="cipher-link">ENCRYPT_MAIL</a>
           </div>
         </footer>
       </div>
