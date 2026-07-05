@@ -8,122 +8,123 @@
     <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400&family=Space+Grotesk:wght@300;700;900&display=swap" rel="stylesheet"/>
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet" />
     <link href="./style/style-classified.css" rel="stylesheet">
+    <link href="./style/Artifacts.css" rel="stylesheet">
     <script src="./Dev/tailwind.config.js"></script>
 </head>
 
-<body class="dossier-bg min-h-screen p-4 pt-24 md:p-16 lg:p-24 flex justify-center font-mono selection:bg-pine selection:text-paper text-ink">
+<body class="dossier-bg page-body">
 <div class="noise-overlay" aria-hidden="true"></div>
 
 <div class="max-w-5xl w-full relative">
 <!--    NAVBAR-->
     <nav aria-label="Folder Tabs" class="absolute -top-[42px] left-0 flex items-end gap-1 z-0">
-        <a href="index.html" class="folder-tab h-9 px-8 md:px-10 flex items-center bg-folder border-x-2 border-t-2 border-ink/30 text-ink/70 font-bold text-[10px] uppercase tracking-widest hover:h-10 hover:bg-[#e4d8c8] hover:text-ink focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-pine focus-visible:ring-offset-2 focus-visible:ring-offset-[#0d0e10] transition-all z-20">
+        <a href="index.html" class="folder-tab folder-tab-inactive">
             01_Profile</a>
-        <a href="Artifacts.html" aria-current="page" class="folder-tab h-11 px-8 md:px-10 flex items-center bg-paper border-x-2 border-t-2 border-ink text-ink font-bold text-[10px] uppercase tracking-widest relative z-30">
+        <a href="Artifacts.html" aria-current="page" class="folder-tab folder-tab-active">
             02_Artifacts</a>
-        <a href="#" class="folder-tab h-9 px-8 md:px-10 flex items-center bg-folder border-x-2 border-t-2 border-ink/30 text-ink/70 font-bold text-[10px] uppercase tracking-widest hover:h-10 hover:bg-[#e4d8c8] hover:text-ink focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-pine focus-visible:ring-offset-2 focus-visible:ring-offset-[#0d0e10] transition-all z-10">
+        <a href="systems.html" class="folder-tab folder-tab-inactive">
             03_Systems</a>
     </nav>
 
-    <main class="paper-sheet animate-folder w-full p-8 md:p-16 relative z-10 border-2 border-ink overflow-hidden">
+    <main class="paper-sheet animate-folder">
         
-        <header class="flex flex-col md:flex-row md:items-end justify-between gap-6 border-b-4 border-ink pb-8 mb-16 relative">
-            <div class="flex flex-col md:flex-row md:items-center gap-4 md:gap-6">
-                <span class="text-4xl md:text-5xl font-black bg-ink text-paper px-4 py-2 shadow-[6px_6px_0_0_var(--color-pine)] select-none self-start" aria-hidden="true">
+        <header class="artifacts-header">
+            <div class="artifacts-header-title-container">
+                <span class="artifacts-header-exhibit-tag" aria-hidden="true">
                     E.01</span>
-                <h1 class="text-4xl md:text-6xl font-sans font-black uppercase tracking-tighter leading-none mt-2 md:mt-0">
+                <h1 class="artifacts-header-title">
                     Deployments</h1>
             </div>
-            <div class="font-mono text-[10px] font-black uppercase tracking-[0.2em] text-pine flex flex-col items-start md:items-end gap-1">
-                <span>Status: <span class="text-ink">Active_Link</span></span>
-                <span>Clearance: <span class="text-ink">Level_5</span></span>
+            <div class="artifacts-header-meta">
+                <span>Status: <span class="artifacts-header-meta-status">Active_Link</span></span>
+                <span>Clearance: <span class="artifacts-header-meta-status">Level_5</span></span>
             </div>
         </header>
 
-        <section aria-label="Operational Deployments Timeline" class="pl-6 md:pl-12 border-l-4 border-ink relative space-y-20">
+        <section aria-label="Operational Deployments Timeline" class="timeline">
             
-            <article id="developer" tabindex="0" class="relative group focus-visible:outline-none">
+            <article id="developer" tabindex="0" class="timeline-item">
                 <!-- Timeline Node -->
-                <div class="absolute -left-[37px] md:-left-[61px] top-6 w-10 h-10 bg-paper border-4 border-ink flex items-center justify-center group-hover:bg-pine group-focus-visible:bg-pine transition-colors duration-300 z-10" aria-hidden="true">
-                    <div class="w-3 h-3 bg-pine group-hover:bg-paper group-focus-visible:bg-paper transition-colors duration-300"></div>
+                <div class="timeline-node" aria-hidden="true">
+                    <div class="timeline-node-dot"></div>
                 </div>
 
                 <!-- Content Card -->
-                <div class="bg-paper border-4 border-ink shadow-[8px_8px_0_0_var(--color-ink)] p-6 md:p-10 group-hover:translate-x-1 group-hover:-translate-y-1 group-hover:shadow-[12px_12px_0_0_var(--color-ink)] group-focus-visible:translate-x-1 group-focus-visible:-translate-y-1 group-focus-visible:shadow-[12px_12px_0_0_var(--color-ink)] group-focus-visible:ring-4 group-focus-visible:ring-pine group-focus-visible:ring-offset-4 group-focus-visible:ring-offset-paper transition-all duration-300 ease-out">
+                <div class="timeline-card">
                     
-                    <header class="flex flex-col lg:flex-row lg:justify-between lg:items-start gap-4 mb-8">
-                        <div class="space-y-2">
-                            <h2 class="text-2xl md:text-3xl font-sans font-black uppercase tracking-tight leading-none text-ink">Full Stack Developer</h2>
-                            <div class="text-xs font-bold tracking-[0.1em] text-pine uppercase flex items-center gap-2">
+                    <header class="timeline-card-header">
+                        <div class="timeline-card-title-container">
+                            <h2 class="timeline-card-title">Full Stack Developer</h2>
+                            <div class="timeline-card-agency">
                                 <span class="w-2 h-2 bg-pine rounded-full animate-pulse" aria-hidden="true"></span>
-                                Agency: <span class="bg-ink text-paper px-2 py-0.5 select-all cursor-text font-black">Euphoria Telecom</span>
+                                Agency: <span class="timeline-card-agency-tag">Euphoria Telecom</span>
                             </div>
                         </div>
-                        <time datetime="2021-01" class="font-mono text-xs font-black bg-pine text-paper px-4 py-2 border-2 border-ink self-start whitespace-nowrap shadow-[4px_4px_0_0_var(--color-ink)]">
+                        <time datetime="2021-01" class="timeline-card-date">
                             2025 — 2025
                         </time>
                     </header>
 
-                    <ul class="font-mono text-sm space-y-4 font-bold text-ink/90 max-w-3xl" aria-label="Operational Highlights">
-                        <li class="flex gap-4">
+                    <ul class="timeline-card-body" aria-label="Operational Highlights">
+                        <li>
                             <span class="text-pine block group-hover:text-ink transition-colors" aria-hidden="true">&gt;&gt;</span>
                             <span class="leading-relaxed"> Junior Full Stack Developer where I assisted as an associate in the development of enterprise-level SaaS solutions for the telecommunication industry.
                                 My role involved developing and integrating front-end (React), back-end (C#/.NET), 
                                 and database (MySQL) solutions for critical operations in the telecommunication industry, including billing, routing, and account management.
-                                <strong class="bg-pine text-paper px-1">Increased Team %</strong>.
+                                <strong class="highlight">Increased Team %</strong>.
                             </span>
                         </li>
-                        <li class="flex gap-4">
+                        <li>
                             <span class="text-pine block group-hover:text-ink transition-colors" aria-hidden="true">&gt;&gt;</span>
                             <span class="leading-relaxed">Assisted in a team environment in carrying out code review, bug tracking, and sprint planning in meeting tight release criteria. 
                                 Developed a clean and efficient stand alone application with code deployed in a live environment.
-                                <strong class="uppercase border-b-2 border-ink border-dashed hover:border-solid hover:bg-ink hover:text-paper transition-all cursor-crosshair px-0.5">Strong Deployment</strong> 
+                                <strong class="dashed-highlight">Strong Deployment</strong> 
                                 across three continents.</span>
                         </li>
-                        <li class="flex gap-4">
+                        <li>
                             <span class="text-pine block group-hover:text-ink transition-colors" aria-hidden="true">&gt;&gt;</span>
                             <span class="leading-relaxed">Authored the operational standard for "Zero-Trace" deployments.</span>
                         </li>
-                        <li class="flex gap-4">
+                        <li>
                             <span class="text-pine block group-hover:text-ink transition-colors" aria-hidden="true">&gt;&gt;</span>
                             <span class="leading-relaxed">Worked collabratively with cross functioning teams and a team members
-                                specialising <strong class="uppercase border-b-2 border-ink border-dashed hover:border-solid hover:bg-ink hover:text-paper transition-all cursor-crosshair px-0.5">React_and_C#</strong> 
+                                specialising <strong class="dashed-highlight">React_and_C#</strong> 
                                 stacks.</span>
                         </li>
                     </ul>
                 </div>
             </article>
 
-            <article id="juniordev" tabindex="0" class="relative group focus-visible:outline-none">
+            <article id="juniordev" tabindex="0" class="timeline-item">
                 <!-- Timeline Node -->
-                <div class="absolute -left-[37px] md:-left-[61px] top-6 w-10 h-10 bg-folder border-4 border-ink flex items-center justify-center group-hover:bg-ink group-focus-visible:bg-ink transition-colors duration-300 z-10" aria-hidden="true">
-                    <div class="w-3 h-3 bg-ink group-hover:bg-folder group-focus-visible:bg-folder transition-colors duration-300"></div>
+                <div class="timeline-node" aria-hidden="true">
+                    <div class="timeline-node-dot"></div>
                 </div>
 
                 <!-- Content Card -->
-                <div class="bg-folder/40 border-4 border-ink/40 p-6 md:p-10 group-hover:bg-folder/80 group-hover:border-ink transition-all duration-300 group-hover:shadow-[8px_8px_0_0_var(--color-ink)] group-focus-visible:bg-folder/80 group-focus-visible:border-ink group-focus-visible:shadow-[8px_8px_0_0_var(--color-ink)] group-focus-visible:ring-4 group-focus-visible:ring-ink group-focus-visible:ring-offset-4 group-focus-visible:ring-offset-paper">
+                <div class="timeline-card">
                     
-                    <header class="flex flex-col lg:flex-row lg:justify-between lg:items-start gap-4 mb-8">
-                        <div class="space-y-2">
-                            <h2 class="text-2xl md:text-3xl font-sans font-black uppercase tracking-tight leading-none text-ink/80 group-hover:text-ink transition-colors">FullStack Developer</h2>
-                            <div class="text-xs font-bold tracking-[0.1em] text-ink/70 group-hover:text-pine transition-colors uppercase flex items-center gap-2">
-                                Agency: <span class="bg-ink/10 group-hover:bg-ink group-hover:text-paper transition-colors px-2 py-0.5 font-black">Euphoria</span>
+                    <header class="timeline-card-header">
+                        <div class="timeline-card-title-container">
+                            <h2 class="timeline-card-title">FullStack Developer</h2>
+                            <div class="timeline-card-agency">
+                                Agency: <span class="timeline-card-agency-tag">Euphoria</span>
                             </div>
                         </div>
-                        <time datetime="2018-01" class="font-mono text-xs font-black text-ink/70 border-4 border-ink/30 px-4 py-2 self-start whitespace-nowrap group-hover:border-ink group-hover:text-ink transition-colors">
+                        <time datetime="2018-01" class="timeline-card-date">
                             2025 — 2025
                         </time>
                     </header>
 
-                    <ul class="font-mono text-sm space-y-4 font-bold text-ink/70 group-hover:text-ink/90 transition-colors max-w-3xl" aria-label="Archival Highlights">
-                        <li class="flex gap-4">
+                    <ul class="timeline-card-body" aria-label="Archival Highlights">
+                        <li>
                             <span class="font-black block" aria-hidden="true">--</span>
                             <span class="leading-relaxed"> Full Stack SaaS Enterprise Application .</span>
                         </li>
-                        <li class="flex gap-4">
+                        <li>
                             <span class="font-black block" aria-hidden="true">--</span>
                             <span class="leading-relaxed">Developed kernel-level monitoring tools using 
-                                <strong class="uppercase border-b-2 border-ink/40 group-hover:border-ink cursor-crosshair px-0.5">C_AND_ASSEMBLY</strong>.
+                                <strong class="dashed-highlight">C_AND_ASSEMBLY</strong>.
                                 Junior Full Stack Developer where I assisted as an associate in the development of enterprise- level SaaS solutions for the telecommunication industry.
                                 My role involved developing and integrating front-end (React), back-end (C#/.NET), and database (MySQL) solutions for critical operations in the telecommunication industry,
                                 including billing, routing, and account management.</span>
@@ -132,29 +133,29 @@
                 </div>
             </article>
 <!--            Second Line Spport Engineer-->
-            <article id="secondline" tabindex="0" class="relative group focus-visible:outline-none">
+            <article id="secondline" tabindex="0" class="timeline-item">
                 <!-- Timeline Node -->
-                <div class="absolute -left-[37px] md:-left-[61px] top-6 w-10 h-10 bg-folder border-4 border-ink flex items-center justify-center group-hover:bg-ink group-focus-visible:bg-ink transition-colors duration-300 z-10" aria-hidden="true">
-                    <div class="w-3 h-3 bg-ink group-hover:bg-folder group-focus-visible:bg-folder transition-colors duration-300"></div>
+                <div class="timeline-node" aria-hidden="true">
+                    <div class="timeline-node-dot"></div>
                 </div>
 
                 <!-- Content Card -->
-                <div class="bg-folder/40 border-4 border-ink/40 p-6 md:p-10 group-hover:bg-folder/80 group-hover:border-ink transition-all duration-300 group-hover:shadow-[8px_8px_0_0_var(--color-ink)] group-focus-visible:bg-folder/80 group-focus-visible:border-ink group-focus-visible:shadow-[8px_8px_0_0_var(--color-ink)] group-focus-visible:ring-4 group-focus-visible:ring-ink group-focus-visible:ring-offset-4 group-focus-visible:ring-offset-paper">
+                <div class="timeline-card">
 
-                    <header class="flex flex-col lg:flex-row lg:justify-between lg:items-start gap-4 mb-8">
-                        <div class="space-y-2">
-                            <h2 class="text-2xl md:text-3xl font-sans font-black uppercase tracking-tight leading-none text-ink/80 group-hover:text-ink transition-colors">Second Line Support Engineer</h2>
-                            <div class="text-xs font-bold tracking-[0.1em] text-ink/70 group-hover:text-pine transition-colors uppercase flex items-center gap-2">
-                                Agency: <span class="bg-ink/10 group-hover:bg-ink group-hover:text-paper transition-colors px-2 py-0.5 font-black">Vumacam</span>
+                    <header class="timeline-card-header">
+                        <div class="timeline-card-title-container">
+                            <h2 class="timeline-card-title">Second Line Support Engineer</h2>
+                            <div class="timeline-card-agency">
+                                Agency: <span class="timeline-card-agency-tag">Vumacam</span>
                             </div>
                         </div>
-                        <time  class="font-mono text-xs font-black text-ink/70 border-4 border-ink/30 px-4 py-2 self-start whitespace-nowrap group-hover:border-ink group-hover:text-ink transition-colors">
+                        <time  class="timeline-card-date">
                             2023 — 2025
                         </time>
                     </header>
 
-                    <ul class="font-mono text-sm space-y-4 font-bold text-ink/70 group-hover:text-ink/90 transition-colors max-w-3xl" aria-label="Archival Highlights">
-                        <li class="flex gap-4">
+                    <ul class="timeline-card-body" aria-label="Archival Highlights">
+                        <li>
                             <span class="font-black block" aria-hidden="true">--</span>
                             <span class="leading-relaxed">Second Line Support Engineer (Technical Role) working with the intention 
                                 of providing assistance for clients. 
@@ -163,45 +164,45 @@
                                 Using python programming language skills to provide custom for 
                                 camera configurations and back end bug fixing in a hybrid working condition. </span>
                         </li>
-                        <li class="flex gap-4">
+                        <li>
                             <span class="font-black block" aria-hidden="true">--</span>
-                            <span class="leading-relaxed">Developed kernel-level monitoring tools using <strong class="uppercase border-b-2 border-ink/40 group-hover:border-ink cursor-crosshair px-0.5">C_AND_ASSEMBLY</strong>.</span>
+                            <span class="leading-relaxed">Developed kernel-level monitoring tools using <strong class="dashed-highlight">C_AND_ASSEMBLY</strong>.</span>
                         </li>
                     </ul>
                 </div>
             </article>
 <!--            Data Enginer-->
-            <article id="dataengineer" tabindex="0" class="relative group focus-visible:outline-none">
+            <article id="dataengineer" tabindex="0" class="timeline-item">
                 <!-- Timeline Node -->
-                <div class="absolute -left-[37px] md:-left-[61px] top-6 w-10 h-10 bg-folder border-4 border-ink flex items-center justify-center group-hover:bg-ink group-focus-visible:bg-ink transition-colors duration-300 z-10" aria-hidden="true">
-                    <div class="w-3 h-3 bg-ink group-hover:bg-folder group-focus-visible:bg-folder transition-colors duration-300"></div>
+                <div class="timeline-node" aria-hidden="true">
+                    <div class="timeline-node-dot"></div>
                 </div>
 
                 <!-- Content Card -->
-                <div class="bg-folder/40 border-4 border-ink/40 p-6 md:p-10 group-hover:bg-folder/80 group-hover:border-ink transition-all duration-300 group-hover:shadow-[8px_8px_0_0_var(--color-ink)] group-focus-visible:bg-folder/80 group-focus-visible:border-ink group-focus-visible:shadow-[8px_8px_0_0_var(--color-ink)] group-focus-visible:ring-4 group-focus-visible:ring-ink group-focus-visible:ring-offset-4 group-focus-visible:ring-offset-paper">
+                <div class="timeline-card">
 
-                    <header class="flex flex-col lg:flex-row lg:justify-between lg:items-start gap-4 mb-8">
-                        <div class="space-y-2">
-                            <h2 class="text-2xl md:text-3xl font-sans font-black uppercase tracking-tight leading-none text-ink/80 group-hover:text-ink transition-colors">Data Analyst</h2>
-                            <div class="text-xs font-bold tracking-[0.1em] text-ink/70 group-hover:text-pine transition-colors uppercase flex items-center gap-2">
-                                Agency: <span class="bg-ink/10 group-hover:bg-ink group-hover:text-paper transition-colors px-2 py-0.5 font-black">Vumacam</span>
+                    <header class="timeline-card-header">
+                        <div class="timeline-card-title-container">
+                            <h2 class="timeline-card-title">Data Analyst</h2>
+                            <div class="timeline-card-agency">
+                                Agency: <span class="timeline-card-agency-tag">Vumacam</span>
                             </div>
                         </div>
-                        <time datetime="2018-01" class="font-mono text-xs font-black text-ink/70 border-4 border-ink/30 px-4 py-2 self-start whitespace-nowrap group-hover:border-ink group-hover:text-ink transition-colors">
+                        <time datetime="2018-01" class="timeline-card-date">
                             2022 — 2023
                         </time>
                     </header>
 
-                    <ul class="font-mono text-sm space-y-4 font-bold text-ink/70 group-hover:text-ink/90 transition-colors max-w-3xl" aria-label="Archival Highlights">
-                        <li class="flex gap-4">
+                    <ul class="timeline-card-body" aria-label="Archival Highlights">
+                        <li>
                             <span class="font-black block" aria-hidden="true">--</span>
                             <span class="leading-relaxed">Data Engineer At Vumacam</span>
                         </li>
-                        <li class="flex gap-4">
+                        <li>
                             <span class="font-black block" aria-hidden="true">--</span>
                             <span class="leading-relaxed">Freelancing as a Data Analyst, Data Scientist and Data Capturer. 
                                 Skills include excel, interpersonal skills and working in hybrid conditions. 
-                                <strong class="uppercase border-b-2 border-ink/40 group-hover:border-ink cursor-crosshair px-0.5">
+                                <strong class="dashed-highlight">
                                     cloud infrastructure to query, process, and analyse massive datasets generated by the surveillance network, 
                                 identifying trends in camera uptime and security alerts.</strong>
                             </span>
@@ -210,36 +211,36 @@
                 </div>
             </article>
 <!--         IT Intern   -->
-            <article id="intern" tabindex="0" class="relative group focus-visible:outline-none">
+            <article id="intern" tabindex="0" class="timeline-item">
                 <!-- Timeline Node -->
-                <div class="absolute -left-[37px] md:-left-[61px] top-6 w-10 h-10 bg-folder border-4 border-ink flex items-center justify-center group-hover:bg-ink group-focus-visible:bg-ink transition-colors duration-300 z-10" aria-hidden="true">
-                    <div class="w-3 h-3 bg-ink group-hover:bg-folder group-focus-visible:bg-folder transition-colors duration-300"></div>
+                <div class="timeline-node" aria-hidden="true">
+                    <div class="timeline-node-dot"></div>
                 </div>
 
                 <!-- Content Card -->
-                <div class="bg-folder/40 border-4 border-ink/40 p-6 md:p-10 group-hover:bg-folder/80 group-hover:border-ink transition-all duration-300 group-hover:shadow-[8px_8px_0_0_var(--color-ink)] group-focus-visible:bg-folder/80 group-focus-visible:border-ink group-focus-visible:shadow-[8px_8px_0_0_var(--color-ink)] group-focus-visible:ring-4 group-focus-visible:ring-ink group-focus-visible:ring-offset-4 group-focus-visible:ring-offset-paper">
+                <div class="timeline-card">
 
-                    <header class="flex flex-col lg:flex-row lg:justify-between lg:items-start gap-4 mb-8">
-                        <div class="space-y-2">
-                            <h2 class="text-2xl md:text-3xl font-sans font-black uppercase tracking-tight leading-none text-ink/80 group-hover:text-ink transition-colors">IT Intern</h2>
-                            <div class="text-xs font-bold tracking-[0.1em] text-ink/70 group-hover:text-pine transition-colors uppercase flex items-center gap-2">
-                                Agency: <span class="bg-ink/10 group-hover:bg-ink group-hover:text-paper transition-colors px-2 py-0.5 font-black">UKS</span>
+                    <header class="timeline-card-header">
+                        <div class="timeline-card-title-container">
+                            <h2 class="timeline-card-title">IT Intern</h2>
+                            <div class="timeline-card-agency">
+                                Agency: <span class="timeline-card-agency-tag">UKS</span>
                             </div>
                         </div>
-                        <time datetime="2018-01" class="font-mono text-xs font-black text-ink/70 border-4 border-ink/30 px-4 py-2 self-start whitespace-nowrap group-hover:border-ink group-hover:text-ink transition-colors">
+                        <time datetime="2018-01" class="timeline-card-date">
                             2022 — 2023
                         </time>
                     </header>
 
-                    <ul class="font-mono text-sm space-y-4 font-bold text-ink/70 group-hover:text-ink/90 transition-colors max-w-3xl" aria-label="Archival Highlights">
-                        <li class="flex gap-4">
+                    <ul class="timeline-card-body" aria-label="Archival Highlights">
+                        <li>
                             <span class="font-black block" aria-hidden="true">--</span>
                             <span class="leading-relaxed">An Internship Where I was able to learn using different linux languaages</span>
                         </li>
-                        <li class="flex gap-4">
+                        <li>
                             <span class="font-black block" aria-hidden="true">--</span>
                             <span class="leading-relaxed">Developed kernel-level monitoring tools using 
-                                <strong class="uppercase border-b-2 border-ink/40 group-hover:border-ink cursor-crosshair px-0.5">C_AND_ASSEMBLY</strong>.
+                                <strong class="dashed-highlight">C_AND_ASSEMBLY</strong>.
                             Built and developed new and working methods</span>
                         </li>
                     </ul>
@@ -248,14 +249,14 @@
 
         </section>
 
-        <footer class="mt-20 pt-8 border-t-2 border-ink flex flex-col sm:flex-row justify-between sm:items-end gap-6">
-            <small class="text-[10px] leading-relaxed opacity-60 uppercase max-w-sm block font-bold">
+        <footer class="artifacts-footer">
+            <small class="artifacts-footer-disclaimer">
                 Reproduced under authority: MLAMBO_T_DIRECTIVE.
                 Any unauthorized data scraping results in <span class="redacted-text px-1">SYSTEM_PURGE</span>.
             </small>
-            <div class="flex gap-6 text-[11px] font-black uppercase tracking-widest">
-                <a href="#" class="hover:text-pine hover:underline underline-offset-4 decoration-2 transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-pine focus-visible:ring-offset-4 focus-visible:ring-offset-paper">LNKD_IN</a>
-                <a href="#" class="hover:text-pine hover:underline underline-offset-4 decoration-2 transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-pine focus-visible:ring-offset-4 focus-visible:ring-offset-paper">G_HUB</a>
+            <div class="artifacts-footer-links">
+                <a href="#" class="artifacts-footer-link">LNKD_IN</a>
+                <a href="#" class="artifacts-footer-link">G_HUB</a>
             </div>
         </footer>
     </main>
